@@ -37,8 +37,8 @@ docker compose down --volumes --remove-orphans >/dev/null 2>&1 || true
  
 # Step 2: Copy example .env if missing
 if [ ! -f ".env" ]; then
-  echo "Copying .env.example to .env..."
-  cp .env.example .env
+  echo "Copying repo .env.example to .env..."
+  cp "$SCRIPT_DIR/.env.example" .env
 else
   echo ".env already exists"
 fi
